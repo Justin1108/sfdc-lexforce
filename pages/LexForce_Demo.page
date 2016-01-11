@@ -1,0 +1,32 @@
+<apex:page standardStylesheets="false" standardController="Contact" applyBodyTag="false" docType="html-5.0" >
+   <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <head>
+         <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />        
+      </head> 
+      <apex:form >
+          <div class="slds">
+            <c:LexInputLookup id="contactField" InputObject="{!Contact}" InputObjectName="Contact" InputFieldName="AccountId" ></c:LexInputLookup>
+            <c:LexOutputField SObject="{!Contact}" Field="Name"></c:LexOutputField>
+            <c:LexOutputField SObject="{!Contact}" Field="AccountId"></c:LexOutputField>
+            <c:LexOutputField SObject="{!Contact}" Field="Phone"></c:LexOutputField>
+            <br/>
+            <c:LexInputField SObject="{!Contact}" Field="Phone"></c:LexInputField> 
+            <c:LexInputField SObject="{!Contact}" Field="Name"></c:LexInputField> 
+            <c:LexInputField SObject="{!Contact}" Field="Description"></c:LexInputField> 
+          </div>
+          <div>
+            <apex:inputField value="{!Contact.Name}"></apex:inputField>
+            <br/>
+            <apex:inputField value="{!Contact.Phone}"></apex:inputField>
+            <br/>
+
+	          <apex:outputField value="{!Contact.Phone}"></apex:outputField>
+            <br/>
+            <apex:outputField value="{!Contact.AccountId}"></apex:outputField>
+            <br/>
+            <apex:outputField value="{!Contact.Description}"></apex:outputField>
+
+          </div>
+      </apex:form>
+   </html>
+</apex:page>
