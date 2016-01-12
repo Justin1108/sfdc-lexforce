@@ -30,5 +30,14 @@
 	    	</div>
 	    </apex:outputPanel>
 
+    	<!-- Render Checkbox Field -->
+	    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divCheckbox" rendered="{!isCheckbox}">
+		    <label class="slds-checkbox" for="{!$Component.checkBox}">
+	    		<apex:inputField id="checkBox" value="{!sObject[field]}"></apex:inputField>
+			    <span class="slds-checkbox--faux"></span>
+			    <span class="slds-form-element__label">{!$ObjectType[objectName].Fields[field].Label}</span>
+			</label>
+	    </apex:outputPanel>
+
     </apex:outputPanel>
 </apex:component>

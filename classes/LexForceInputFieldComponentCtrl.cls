@@ -12,6 +12,7 @@ public with sharing class LexForceInputFieldComponentCtrl {
     	get {
     		DisplayType dispType = getFieldDescribe().getType();
     		if (dispType == Schema.DisplayType.String ||
+    			dispType == Schema.DisplayType.Currency ||
     			dispType == Schema.DisplayType.Phone)
     			return true;
     		else
@@ -23,6 +24,16 @@ public with sharing class LexForceInputFieldComponentCtrl {
     	get {
     		DisplayType dispType = getFieldDescribe().getType();
     		if (dispType == Schema.DisplayType.TextArea)
+    			return true;
+    		else
+    			return false;
+    	}
+    }
+
+    public Boolean isCheckbox {
+    	get {
+    		DisplayType dispType = getFieldDescribe().getType();
+    		if (dispType == Schema.DisplayType.Boolean)
     			return true;
     		else
     			return false;

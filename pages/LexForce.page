@@ -29,6 +29,23 @@
 	    		<!--
 	    		<c:LexInputField SObject="{!LexForce}" Field="Geolocation__c"></c:LexInputField>
 	    		-->
+
+<div class="slds-form-element">
+  <label class="slds-checkbox" for="checkboxSample1">
+    <input name="checkbox" type="checkbox" id="checkboxSample1"  />
+    <span class="slds-checkbox--faux"></span>
+    <span class="slds-form-element__label">Checkbox Label</span>
+  </label>
+</div>	  
+
+<div class="slds-form-element">
+  <label class="slds-checkbox" for="checkboxSample2">
+    <input name="checkbox" type="checkbox" id="checkboxSample2"  />
+    <span class="slds-checkbox--faux">::after</span>
+    <span class="slds-form-element__label">Checkbox Label</span>
+  </label>
+</div>	  
+	
 	    	</div>
 	    </apex:form>
 		<apex:detail ></apex:detail>
