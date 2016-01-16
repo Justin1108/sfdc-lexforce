@@ -1,0 +1,43 @@
+<apex:component controller="LexForceInputFieldComponentCtrl">
+    <apex:attribute name="sObject" description="" type="SObject" assignTo="{!inputObject}" />
+    <apex:attribute name="field" description="" type="String" assignTo="{!fieldName}" />
+
+    <!-- Render the Read-Only Field -->
+    <apex:outputPanel layout="none" rendered="{!isReadOnly}">
+    	<div class="slds-form-element slds-has-divider--bottom">
+  			<span class="slds-form-element__label">{!$ObjectType[objectName].Fields[field].Label}</span>
+  			<div class="slds-form-element__control">
+    			<span class="slds-form-element__static">{!sObject[field]}</span>
+  			</div>
+		</div>	
+    </apex:outputPanel>
+
+	<!-- Render the None Read-Only Field -->
+    <apex:outputPanel layout="none" rendered="{!!isReadOnly}">
+    	<!-- Render Input Field -->
+	    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divTextInput" rendered="{!isInput}">
+	    	<label class="slds-form-element__label" for="txtInput">{!$ObjectType[objectName].Fields[field].Label}</label>
+	    	<div class="slds-form-element__control">
+	    		<apex:inputField id="txtInput" value="{!sObject[field]}" styleclass="slds-input"></apex:inputField>
+	    	</div>
+	    </apex:outputPanel>
+
+    	<!-- Render Textarea Field -->
+	    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divTextArea" rendered="{!isTextarea}">
+	    	<label class="slds-form-element__label" for="txtArea">{!$ObjectType[objectName].Fields[field].Label}</label>
+	    	<div class="slds-form-element__control">
+	    		<apex:inputField id="txtArea" value="{!sObject[field]}" styleclass="slds-textarea"></apex:inputField>
+	    	</div>
+	    </apex:outputPanel>
+
+    	<!-- Render Checkbox Field -->
+	    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divCheckbox" rendered="{!isCheckbox}">
+		    <label class="slds-checkbox" for="{!$Component.checkBox}">
+	    		<apex:inputField id="checkBox" value="{!sObject[field]}"></apex:inputField>
+			    <span class="slds-checkbox--faux"></span>
+			    <span class="slds-form-element__label">{!$ObjectType[objectName].Fields[field].Label}</span>
+			</label>
+	    </apex:outputPanel>
+
+    </apex:outputPanel>
+</apex:component>
