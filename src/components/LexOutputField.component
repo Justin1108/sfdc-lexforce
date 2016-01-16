@@ -1,0 +1,21 @@
+<apex:component controller="LexForceComponentCtrl">
+    <apex:attribute name="sObject" description="" type="SObject" assignTo="{!inputObject}" />
+    <apex:attribute name="field" description="" type="String" assignTo="{!fieldName}" />
+    
+    <!-- Default pass through attributes  -->
+    <apex:attribute name="dir" description="" type="String" />
+    <apex:attribute name="label" description="" type="String" />
+    <apex:attribute name="lang" description="" type="String" />
+    <apex:attribute name="style" description="" type="String" />
+    <apex:attribute name="styleClass" description="" type="String" />
+    <apex:attribute name="title" description="" type="String" />
+
+    <apex:outputField value="{!SObject[Field]}"
+    					dir="{!dir}"
+    					label="{!label}"
+    					lang="{!lang}"
+    					style="{!style}"
+    					styleClass="{!styleClass}"
+    					title="{!title}"
+    					></apex:outputField>
+</apex:component>

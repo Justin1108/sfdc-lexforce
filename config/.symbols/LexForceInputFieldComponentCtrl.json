@@ -1,0 +1,307 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 9,
+                "line": 124
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "LexForceInputFieldComponentCtrl",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p15000006SspLAAS",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p15000006SspLAAS",
+    "methods": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 22,
+                "line": 90
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "getSField",
+            "parameters": [],
+            "references": [],
+            "returnType": "SObjectField",
+            "type": null
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 29,
+                "line": 97
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "getFieldDescribe",
+            "parameters": [],
+            "references": [],
+            "returnType": "DescribeFieldResult",
+            "type": null
+        }
+    ],
+    "name": "LexForceInputFieldComponentCtrl",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 2
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "inputObject",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 3
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 5
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isReadOnly",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 11
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isInput",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 28
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isTextarea",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 38
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isPicklist",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 49
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isMultiPicklist",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 59
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isCheckbox",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 69
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isDatetime",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 80
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "isLookup",
+            "references": [],
+            "type": "Boolean"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 106
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "objectName",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "LexForceInputFieldComponentCtrl",
+        "references": [],
+        "type": "LexForceInputFieldComponentCtrl"
+    },
+    "variables": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 13
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 30
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 40
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 51
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 61
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 71
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 25,
+                "line": 82
+            },
+            "modifiers": [],
+            "name": "dispType",
+            "references": [],
+            "type": "DisplayType"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 16,
+                "line": 98
+            },
+            "modifiers": [],
+            "name": "sf",
+            "references": [],
+            "type": "SObjectField"
+        }
+    ]
+}

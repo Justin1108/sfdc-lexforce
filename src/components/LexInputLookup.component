@@ -1,0 +1,24 @@
+<apex:component >
+    <apex:attribute name="InputObject" description="" type="SObject" />
+    <apex:attribute name="InputObjectName" description="" type="String" />
+    <apex:attribute name="InputFieldName" description="" type="String" />
+    <apex:attribute name="onchange" description="" type="String" />
+    
+    <div class="slds-lookup" data-select="single" data-scope="single" data-typeahead="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="lookup">{!$ObjectType[InputObjectName].Fields[InputFieldName].Label}</label>
+            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+                <apex:inputField id="lookup" value="{!InputObject[InputFieldName]}" styleclass="slds-input" style="visibility:hidden" onchange="{!onchange}" />
+            </div>
+        </div>
+    </div>
+    <script>
+        var lkInput = document.getElementById("{!$Component.lookup}");
+        lkInput.style.visibility = "";
+        var lkSpan = lkInput.parentElement;
+        var lkLink = lkSpan.querySelector("a");
+        lkLink.style.visibility = "";
+        lkLink.className = "";
+        lkLink.innerHTML = "<svg aria-hidden=\"true\" class=\"slds-input__icon\"><use xlink:href=\"" + "{!URLFOR($Resource.SLDS, 'assets/icons/utility-sprite/svg/symbols.svg#search')}" + "\"></use></svg>";
+    </script>
+</apex:component>

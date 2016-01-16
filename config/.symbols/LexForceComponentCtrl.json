@@ -1,0 +1,83 @@
+{
+    "constructors": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 12,
+                "line": 14
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "LexForceComponentCtrl",
+            "parameters": [],
+            "references": [],
+            "type": null
+        }
+    ],
+    "externalReferences": [],
+    "id": "01p15000006SnTcAAK",
+    "innerClasses": [],
+    "interfaces": [],
+    "key": "01p15000006SnTcAAK",
+    "methods": [],
+    "name": "LexForceComponentCtrl",
+    "namespace": null,
+    "parentClass": "",
+    "properties": [
+        {
+            "annotations": [],
+            "location": {
+                "column": 20,
+                "line": 2
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "inputObject",
+            "references": [],
+            "type": "SObject"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 3
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "fieldName",
+            "references": [],
+            "type": "String"
+        },
+        {
+            "annotations": [],
+            "location": {
+                "column": 19,
+                "line": 5
+            },
+            "modifiers": [
+                "public"
+            ],
+            "name": "objectName",
+            "references": [],
+            "type": "String"
+        }
+    ],
+    "tableDeclaration": {
+        "annotations": [],
+        "location": {
+            "column": 27,
+            "line": 1
+        },
+        "modifiers": [
+            "public",
+            "with sharing"
+        ],
+        "name": "LexForceComponentCtrl",
+        "references": [],
+        "type": "LexForceComponentCtrl"
+    },
+    "variables": []
+}
