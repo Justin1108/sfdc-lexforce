@@ -10,6 +10,7 @@ public with sharing class LexInputFieldCompCtrl {
             return !getFieldDescribe().isUpdateable();
         }
     }
+    
 
     public Boolean isInput {
     	get {
