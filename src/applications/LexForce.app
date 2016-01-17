@@ -5,6 +5,5 @@
     <label>LexForce</label>
     <tab>standard-Account</tab>
     <tab>standard-Contact</tab>
-    <tab>LexForce_Demo</tab>
     <tab>LexForce__c</tab>
 </CustomApplication>
