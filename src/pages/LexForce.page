@@ -1,40 +1,46 @@
-<!--
-<apex:page standardStylesheets="true" applyBodyTag="false" docType="html-5.0" controller="LexForceController" >
--->
-<apex:page standardStylesheets="true" applyBodyTag="false" docType="html-5.0" standardController="LexForce__c" extensions="LexForceController" >
+<apex:page standardStylesheets="true" applyBodyTag="false" docType="html-5.0" standardController="LexForce__c" extensions="LexForceDemoPageController" >
 	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<head>
 	        <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />        
 		</head> 
         <apex:form >
             <div class="slds">
-                <div class="slds-form--stack">
-                    <c:LexInputField SObject="{!LexForce}" Field="Name"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Account__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Checkbox__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Currency__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Date__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Datetime__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Email__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Geolocation__Latitude__s"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Geolocation__Longitude__s"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Number__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Percent__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Phone__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Picklist__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="MultiPicklist__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="Text__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="TextArea__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="TextAreaLong__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="TextAreaRich__c"></c:LexInputField>
-                    <c:LexInputField SObject="{!LexForce}" Field="URL__c"></c:LexInputField>
-                    <br/>
-                    <div class="slds-button-group" role="group">
-                        <apex:commandButton action="{!save}" value="Save" id="btnSave" styleClass="slds-button slds-button--neutral"/>
-                        <apex:commandButton action="{!cancel}" value="Cancel" id="btnCancel" styleClass="slds-button slds-button--neutral"/>
+                <div class="slds-grid">
+                    <div class="slds-size--1-of-2" style="padding-right:16px;padding-bottom:8px;">
+                        <div class="slds-form-stack">
+                            <c:LexInputField SObject="{!LexForce}" Field="Name"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Account__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Checkbox__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Currency__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Date__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Datetime__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Email__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Geolocation__Latitude__s"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Geolocation__Longitude__s"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Number__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Percent__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Phone__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="URL__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Text__c"></c:LexInputField>
+
+                        </div>
+                    </div>
+                    <div class="slds-size--1-of-2" style="padding-right:16px;padding-bottom:8px;">
+                        <div class="slds-form-stack">
+                            <c:LexInputField SObject="{!LexForce}" Field="Picklist__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="MultiPicklist__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="TextArea__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="TextAreaLong__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="TextAreaRich__c"></c:LexInputField>
+                        </div>
                     </div>
                 </div>
+                <div class="slds-text-align--center" role="group">
+                    <apex:commandButton action="{!save}" value="Save" id="btnSave" styleClass="slds-button slds-button--neutral"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel" id="btnCancel" styleClass="slds-button slds-button--neutral"/>
+                </div>                 
 	    	</div>
+
 	    </apex:form>
 
 	</html>

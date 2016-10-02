@@ -1,0 +1,18 @@
+<apex:component controller="LexForceComponentCtrl">
+    <apex:attribute name="sObject" description="" type="SObject" assignTo="{!inputObject}" />
+    <apex:attribute name="field" description="" type="String" assignTo="{!fieldName}" />
+    <apex:attribute name="inlineEditHandler" description="String" type="String" />
+
+    <!-- Render the Read-Only Field -->
+    <apex:outputPanel layout="none">
+        <div class="slds-form-element slds-has-divider--bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <span class="slds-form-element__label">{!$ObjectType[objectName].Fields[field].Label}</span>
+            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right" ondblclick="{!JSENCODE(inlineEditHandler)}">
+                <svg aria-hidden="true" class="slds-input__icon slds-icon-text-default" onclick="{!JSENCODE(inlineEditHandler)}">
+                    <use xlink:href="{!URLFOR($Resource.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#edit')}"></use>
+                </svg>
+                <span class="slds-form-element__static">{!sObject[field]}&nbsp;</span>
+            </div>
+        </div>
+    </apex:outputPanel>
+</apex:component>
