@@ -8,7 +8,10 @@ __LexForce__ is a collection of custom Visualforce Components for Lightning Expe
 
 SLDS.resource file is generated with the [tool](https://tools.lightningdesignsystem.com/css-customizer) to create your custom CSS. The scoping class name is "vf" and the Salesforce release is "Winter 17".
 
-## 2016-10-16
-### Changed
+## Blog Posts
+- [Migrating <apex:InputField/> Visualforce Component into Lightning Experience World](https://justinyue.wordpress.com/2016/01/23/migrating-visualforce-component-into-lightning-experience-world/)
+
+## Changelog
+### 2016-10-16
 - Fix styling issue for the dependent picklist
 
