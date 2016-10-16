@@ -96,6 +96,56 @@
 		    	<div class="slds-form-element__control">
 		    		<apex:inputField id="selPicklist" value="{!sObject[field]}" styleclass="slds-select"></apex:inputField>
 		    	</div>
+		    	<apex:outputPanel layout="none" rendered="{!isDependentPicklist}">
+		    	<script>
+					window.lexpl = window.lexpl || {};
+
+					if (lexpl.deppicklists == null) {
+						lexpl.deppicklists = [];
+						var winOnload = window.onload;
+						window.onload = function() {
+							// register lexpl events
+							for (var i = 0; i < lexpl.deppicklists.length; i++) {
+								var depplId = lexpl.deppicklists[i];
+								var deppl = picklist.picklists[depplId];
+								var controller = document.getElementById(deppl.controller_id);
+								var ctrlTagName = controller.tagName;
+								if (ctrlTagName == "SELECT") {
+									controller.addEventListener("change", function(evt) {
+										lexpl.updateDepPicklistStyle(evt);
+									});
+								} else { // Checkbox
+									controller.addEventListener("click", function(evt) {
+										lexpl.updateDepPicklistStyle(evt);
+									});
+								}
+
+								var dpl = document.getElementById(depplId);
+								dpl.className += " slds-select";	
+							}
+
+							if (winOnload != null)
+								winOnload();
+						}
+					}
+
+					if (lexpl.updateDepPicklistStyle == null) {
+						lexpl.updateDepPicklistStyle = function(evt) {
+							for (var i = 0; i < lexpl.deppicklists.length; i++) {
+								var depplId = lexpl.deppicklists[i];
+								var deppl = picklist.picklists[depplId];
+								if (deppl.controller_id == evt.target.id) {
+									var dpl = document.getElementById(depplId);
+									if (dpl.className == null || dpl.className.indexOf("slds-select") == -1)
+										dpl.className += " slds-select";								
+								}
+							}
+						}
+					}
+
+					lexpl.deppicklists.push("{!$Component.selPicklist}");		    		
+		    	</script>
+		    	</apex:outputPanel>
 		    </apex:outputPanel>
 
 	    	<!-- Render MultiplePicklist Field -->

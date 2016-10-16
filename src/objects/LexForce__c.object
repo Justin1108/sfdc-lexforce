@@ -23,10 +23,6 @@
         <type>Visualforce</type>
     </actionOverrides>
     <actionOverrides>
-        <actionName>Follow</actionName>
-        <type>Default</type>
-    </actionOverrides>
-    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -54,6 +50,7 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -62,7 +59,6 @@
         <externalId>false</externalId>
         <label>Account</label>
         <referenceTo>Account</referenceTo>
-        <relationshipLabel>LexForces</relationshipLabel>
         <relationshipName>LexForces</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -101,6 +97,87 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Dep_Picklist_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Dep Picklist 2</label>
+        <picklist>
+            <controllingField>Checkbox__c</controllingField>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>True</fullName>
+                <default>false</default>
+                <controllingFieldValues>checked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>0</fullName>
+                <default>false</default>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>False</fullName>
+                <default>false</default>
+                <controllingFieldValues>unchecked</controllingFieldValues>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Dep_Picklist__c</fullName>
+        <externalId>false</externalId>
+        <label>Dep Picklist</label>
+        <picklist>
+            <controllingField>Picklist__c</controllingField>
+            <picklistValues>
+                <fullName>Boy</fullName>
+                <default>false</default>
+                <controllingFieldValues>Male</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Man</fullName>
+                <default>false</default>
+                <controllingFieldValues>Male</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Girl</fullName>
+                <default>false</default>
+                <controllingFieldValues>Female</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Woman</fullName>
+                <default>false</default>
+                <controllingFieldValues>Female</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lay</fullName>
+                <default>false</default>
+                <controllingFieldValues>Female</controllingFieldValues>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Email__c</fullName>
@@ -152,6 +229,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>MultiselectPicklist</type>
         <visibleLines>4</visibleLines>
@@ -200,6 +278,7 @@
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
+        <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -247,7 +326,7 @@
         <trackTrending>false</trackTrending>
         <type>Url</type>
     </fields>
-    <label>LexForce</label>
+    <label>LexForce Demo</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
@@ -257,7 +336,7 @@
         <label>LexForce Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>LexForces</pluralLabel>
+    <pluralLabel>LexForce Demo</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

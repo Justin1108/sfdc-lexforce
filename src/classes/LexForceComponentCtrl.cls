@@ -49,6 +49,12 @@ public with sharing class LexForceComponentCtrl {
     	}
     }
 
+    public Boolean isDependentPicklist {
+        get {
+            return getFieldDescribe().isDependentPicklist();
+        }
+    }
+
 
     public Boolean isMultiPicklist {
     	get {

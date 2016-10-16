@@ -25,6 +25,8 @@ public with sharing class LexForceDemoPageController {
                     Percent__c,
                     Phone__c,
                     Picklist__c,
+                    Dep_Picklist__c,
+                    Dep_Picklist_2__c,
                     Text__c,
                     TextArea__c,
                     TextAreaLong__c,

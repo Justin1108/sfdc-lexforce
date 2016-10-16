@@ -11,6 +11,7 @@
                             <c:LexInputField SObject="{!LexForce}" Field="Name"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="Account__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="Checkbox__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Dep_Picklist_2__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="Currency__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="Date__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="Datetime__c"></c:LexInputField>
@@ -28,6 +29,7 @@
                     <div class="slds-size--1-of-2" style="padding-right:16px;padding-bottom:8px;">
                         <div class="slds-form-stack">
                             <c:LexInputField SObject="{!LexForce}" Field="Picklist__c"></c:LexInputField>
+                            <c:LexInputField SObject="{!LexForce}" Field="Dep_Picklist__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="MultiPicklist__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="TextArea__c"></c:LexInputField>
                             <c:LexInputField SObject="{!LexForce}" Field="TextAreaLong__c"></c:LexInputField>
