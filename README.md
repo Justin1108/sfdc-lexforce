@@ -1,6 +1,6 @@
 # LexForce
 ## A solution to quickly build your Visualforce page for Lightning Experience.
-### __LexForce__ is selected to present in the breakout session of Dreamforce 2016.
+### __LexForce__ was selected to be presented in the breakout session of Dreamforce 2016.
 [Developing Lightning Experience App with Visualforce and SLDS](https://success.salesforce.com/Sessions#/session/a2q3A000000LBSGQA4)
 
 
