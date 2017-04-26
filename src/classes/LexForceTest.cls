@@ -34,7 +34,7 @@ private class LexForceTest {
 		System.assertEquals(false, ctrl.isInput);
 		System.assertEquals(true, ctrl.isTextarea);
 
-		ctrl.fieldName = 'CleanStatus';
+		ctrl.fieldName = 'Salutation';
 		System.assertEquals(false, ctrl.isInput);
 		System.assertEquals(true, ctrl.isPicklist);
 
