@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>*</members>
+		<members>LexForceComponentCtrl</members>
+		<members>LexForceController</members>
+		<members>LexForceTest</members>
 		<name>ApexClass</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>LexInputField</members>
+		<members>LexOutputField</members>
 		<name>ApexComponent</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>LexForce</members>
 		<name>ApexPage</name>
 	</types>
 	<types>
@@ -21,12 +24,12 @@
 		<name>CustomObject</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>LexForce__c</members>
 		<name>CustomTab</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>StaticResource</name>
 	</types>
-	<version>35.0</version>
+	<version>37.0</version>
 </Package>
