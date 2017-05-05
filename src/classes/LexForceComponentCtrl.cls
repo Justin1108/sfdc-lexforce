@@ -5,9 +5,18 @@ public with sharing class LexForceComponentCtrl {
     public LexForceComponentCtrl() {
     }
 
+    public Boolean isRequired { 
+		get {
+			return !getFieldDescribe().isNillable();
+		}
+	}
+
     public Boolean isReadOnly {
         get {
-            return !getFieldDescribe().isUpdateable();
+			if (inputObject.id != null)
+            	return !getFieldDescribe().isUpdateable();
+			else
+				return !getFieldDescribe().isCreateable();
         }
     }
     
