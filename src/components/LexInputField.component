@@ -23,7 +23,10 @@
 	    <apex:outputPanel layout="none" rendered="{!!isReadOnly}">
 	    	<!-- Render Input Field -->
 		    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divTextInput" rendered="{!isInput}">
-		    	<label class="slds-form-element__label" for="txtInput">{!$ObjectType[objectName].Fields[field].Label}</label>
+		    	<label class="slds-form-element__label" for="txtInput">
+					<apex:outputPanel layout="none" rendered="{!isRequired}"><abbr class="slds-required" title="required" >*</abbr></apex:outputPanel>
+					{!$ObjectType[objectName].Fields[field].Label}
+				</label>
 		    	<div class="slds-form-element__control">
 		    		<apex:inputField id="txtInput" value="{!sObject[field]}" styleclass="slds-input"></apex:inputField>
 		    	</div>
@@ -31,7 +34,10 @@
 
 	    	<!-- Render Textarea Field -->
 		    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divTextArea" rendered="{!isTextarea}">
-		    	<label class="slds-form-element__label" for="txtArea">{!$ObjectType[objectName].Fields[field].Label}</label>
+		    	<label class="slds-form-element__label" for="txtArea">
+					<apex:outputPanel layout="none" rendered="{!isRequired}"><abbr class="slds-required" title="required" >*</abbr></apex:outputPanel>
+					{!$ObjectType[objectName].Fields[field].Label}
+				</label>
 		    	<div class="slds-form-element__control">
 		    		<apex:inputField id="txtArea" value="{!sObject[field]}" styleclass="slds-textarea"></apex:inputField>
 		    	</div>
@@ -48,7 +54,10 @@
 
 	    	<!-- Render Date/Datetime Field -->
 		    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divDatetime" rendered="{!isDatetime}">
-		    	<label class="slds-form-element__label" for="txtDatetime">{!$ObjectType[objectName].Fields[field].Label}</label>
+		    	<label class="slds-form-element__label" for="txtDatetime">
+					<apex:outputPanel layout="none" rendered="{!isRequired}"><abbr class="slds-required" title="required" >*</abbr></apex:outputPanel>
+					{!$ObjectType[objectName].Fields[field].Label}
+				</label>
 		    	<div class="slds-form-element__control">
 		    		<apex:inputField id="txtDatetime" value="{!sObject[field]}" styleclass="slds-input" style="width:50%;"></apex:inputField>
 		    	</div>
@@ -74,7 +83,10 @@
 	    	<!-- Render Lookup Field -->
 		    <apex:outputPanel layout="block" styleClass="slds-lookup" id="divLookup" rendered="{!isLookup}" html-data-select="single" html-data-scope="single" html-data-typeahead="true">
 		        <apex:outputPanel layout="block" styleClass="slds-form-element" id="divLookupFormElem">
-		            <label class="slds-form-element__label" for="lookup">{!$ObjectType[objectName].Fields[field].Label}</label>
+		            <label class="slds-form-element__label" for="lookup">
+						<apex:outputPanel layout="none" rendered="{!isRequired}"><abbr class="slds-required" title="required" >*</abbr></apex:outputPanel>
+						{!$ObjectType[objectName].Fields[field].Label}
+					</label>
 		            <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
 		                <apex:inputField id="lookup" value="{!sObject[field]}" styleclass="slds-input" style="visibility:hidden" />
 		            </div>
@@ -97,7 +109,10 @@
 
 	    	<!-- Render Picklist Field -->
 		    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divPicklist" rendered="{!isPicklist}">
-		    	<label class="slds-form-element__label" for="selPicklist">{!$ObjectType[objectName].Fields[field].Label}</label>
+		    	<label class="slds-form-element__label" for="selPicklist">
+					<apex:outputPanel layout="none" rendered="{!isRequired}"><abbr class="slds-required" title="required" >*</abbr></apex:outputPanel>
+					{!$ObjectType[objectName].Fields[field].Label}
+				</label>
 		    	<div class="slds-form-element__control">
 		    		<apex:inputField id="selPicklist" value="{!sObject[field]}" styleclass="slds-select"></apex:inputField>
 		    	</div>
@@ -155,7 +170,10 @@
 
 	    	<!-- Render MultiplePicklist Field -->
 		    <apex:outputPanel layout="block" styleClass="slds-form-element" id="divMultiPicklist" rendered="{!isMultiPicklist}">
-		    	<label class="slds-form-element__label" for="divMSPWrapper">{!$ObjectType[objectName].Fields[field].Label}</label>
+		    	<label class="slds-form-element__label" for="divMSPWrapper">
+					<apex:outputPanel layout="none" rendered="{!isRequired}"><abbr class="slds-required" title="required" >*</abbr></apex:outputPanel>
+					{!$ObjectType[objectName].Fields[field].Label}
+				</label>
 		    	<div class="slds-picklist--draggable slds-grid" id="divMSPWrapper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
 					<apex:outputPanel layout="block" styleClass="slds-form-element__control" id="divMspLeft">
 					</apex:outputPanel>

@@ -1,7 +1,7 @@
 <apex:page standardStylesheets="true" applyBodyTag="false" docType="html-5.0" standardController="LexForce__c" extensions="LexForceDemoPageController" >
 	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<head>
-	        <apex:stylesheet value="{!URLFOR($Resource.SLDS, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />        
+			<apex:slds />
 		</head> 
         <apex:form >
             <div class="slds">
